@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>VXNN LIFE Premium</title>
+<meta name="theme-color" content="#05070b"/>
+<link rel="manifest" href="manifest.json" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="splash">
+  <img src="assets/vxnn_logo.png" onerror="this.style.display='none'" alt="VXNN Logo">
+  <h1>VXNN LIFE</h1>
+  <p>Build discipline. Build your future.</p>
+</div>
+
+<div id="app">
+<section class="screen active" id="home">
+  <div class="hero"><div class="shade"></div>
+    <div class="top">
+      <button class="iconBtn" id="soundBtn">🔊</button>
+      <div class="brand">VXNN LIFE</div>
+      <button class="iconBtn" id="resetBtn">↻</button>
+    </div>
+    <div class="heroText">
+      <p class="badge">PREMIUM PERSONAL GROWTH SYSTEM</p>
+      <h1>Sᴀɪ Cʜᴀʀᴀɴ ⚡</h1>
+      <p class="quote" id="heroQuote">“Discipline today, freedom tomorrow.”</p>
+    </div>
+  </div>
+
+  <div class="statsRow">
+    <div class="stat"><b id="streakDays">0</b><span>Streak</span></div>
+    <div class="stat"><b id="focusScore">0%</b><span>Score</span></div>
+    <div class="stat"><b id="xpValue">0</b><span>XP</span></div>
+  </div>
+
+  <div class="levelCard">
+    <small>Current Level</small>
+    <h2 id="levelName">Starter</h2>
+    <div class="bar"><div id="levelBar"></div></div>
+  </div>
+
+  <div class="card glow">
+    <h2>Today’s Mission</h2>
+    <label><input type="checkbox" class="habit" data-id="workout" data-xp="30"> Workout</label>
+    <label><input type="checkbox" class="habit" data-id="skill" data-xp="40"> Skill Learning</label>
+    <label><input type="checkbox" class="habit" data-id="phone" data-xp="30"> No Phone Distraction</label>
+    <button class="primary" id="saveDay">Save Today</button>
+    <button class="secondary" id="focusBtn">Start Focus Mode 🔒</button>
+    <p class="saveStatus" id="saveStatus"></p>
+  </div>
+
+  <div class="card">
+    <h2>Quick Motivation</h2>
+    <p id="motivationText">You don’t find willpower. You create it.</p>
+    <button class="secondary" id="newQuote">New Quote</button>
+  </div>
+</section>
+
+<section class="screen" id="goals">
+  <h1>Goals 🎯</h1>
+  <div class="goal"><b>Learn New Skills</b><span>Build strong foundation and master useful skills.</span><progress value="70" max="100"></progress></div>
+  <div class="goal"><b>Build Foundation</b><span>Develop discipline, focus, and daily routine.</span><progress value="60" max="100"></progress></div>
+  <div class="goal"><b>Use My Knowledge</b><span>Apply skills steadily and create real value.</span><progress value="40" max="100"></progress></div>
+  <div class="goal"><b>Make Parents Proud</b><span>Become financially strong and independent.</span><progress value="55" max="100"></progress></div>
+</section>
+
+<section class="screen" id="focus">
+  <h1>Focus Studio 🔒</h1>
+  <div class="card focusPanel">
+    <h2 id="focusModeText">Ready to Focus</h2>
+    <div id="focusTimer">25:00</div>
+    <p id="focusSub">25 minutes focus + 5 minutes break</p>
+    <div class="focusBtns">
+      <button class="primary" id="startFocus">Start</button>
+      <button class="secondary" id="pauseFocus">Pause</button>
+      <button class="secondary" id="resetFocus">Reset</button>
+    </div>
+  </div>
+  <div class="card"><h2>Focus Rewards</h2><p>Complete one focus session and earn <b>50 XP</b>.</p><p>Total focus sessions: <b id="focusSessions">0</b></p></div>
+</section>
+
+<section class="screen" id="stats">
+  <h1>Stats 📊</h1>
+  <div class="card"><h2>7-Day Progress</h2><div id="weekGrid" class="weekGrid"></div></div>
+  <div class="card">
+    <h2>Performance</h2>
+    <div class="metric"><span>Total Saved Days</span><b id="totalDays">0</b></div>
+    <div class="metric"><span>Longest Streak</span><b id="longestStreak">0</b></div>
+    <div class="metric"><span>Focus Sessions</span><b id="focusSessions2">0</b></div>
+  </div>
+  <button class="primary" id="shareBtn">Share My Progress 📤</button>
+</section>
+
+<section class="screen" id="mind">
+  <h1>Mindset 🧠</h1>
+  <div class="rule">No excuses. Action builds identity.</div>
+  <div class="rule">Discipline beats motivation.</div>
+  <div class="rule">Focus on progress, not comparison.</div>
+  <div class="rule">Pain is temporary. Pride is forever.</div>
+</section>
+
+<section class="screen" id="future">
+  <h1>Future Me 🚀</h1>
+  <div class="card future"><h2>A Message to My Future Self</h2><p>I will make my parents proud. No matter what happens, I won’t quit. I will keep going until I achieve everything I dream of.</p></div>
+  <div class="card"><h2>Premium Note</h2><p>This app saves data offline. For APK updates, use the same package name.</p></div>
+</section>
+
+<nav>
+  <button data-tab="home">⌂<span>Home</span></button>
+  <button data-tab="goals">◎<span>Goals</span></button>
+  <button data-tab="focus">🔒<span>Focus</span></button>
+  <button data-tab="stats">▣<span>Stats</span></button>
+  <button data-tab="mind">✦<span>Mind</span></button>
+  <button data-tab="future">✉<span>Future</span></button>
+</nav>
+</div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
